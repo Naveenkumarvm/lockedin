@@ -323,7 +323,7 @@
       if ('caches' in window) {
         caches.keys().then((keys) => {
           keys.forEach((k) => {
-            if (k.startsWith('lockedin-') && k !== 'lockedin-cache-v6') {
+            if (k.startsWith('lockedin-') && k !== 'lockedin-cache-v8') {
               caches.delete(k);
             }
           });

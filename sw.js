@@ -1,5 +1,5 @@
 // Locked In - Service Worker
-const CACHE_NAME = 'lockedin-cache-v6';
+const CACHE_NAME = 'lockedin-cache-v8';
 
 const STATIC_ASSETS = [
   './',
