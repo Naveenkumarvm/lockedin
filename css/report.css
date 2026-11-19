@@ -1,0 +1,145 @@
+/* ==========================================================================
+   Locked In - Weekly Report Tab & 7-Day Analytics
+   ========================================================================== */
+
+/* 7-Day Bar Chart */
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.chart-bars-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 180px;
+  padding: 10px 4px 4px;
+  gap: 8px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.chart-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.chart-pct-label {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.chart-bar {
+  width: 100%;
+  max-width: 32px;
+  border-radius: 6px 6px 2px 2px;
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  min-height: 4px;
+  transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color var(--transition-fast);
+}
+
+/* 80%+ achieved: Solid primary blue */
+.chart-bar.high-score {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 8px var(--color-primary-glow);
+}
+
+.chart-day-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.chart-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+/* Strict palette: Solid blue for 80%+, light tint outline for < 80% */
+.legend-color.green {
+  background-color: var(--color-primary);
+}
+
+.legend-color.blue {
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+}
+
+/* Report Bento Metrics Grid */
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.report-metric-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.report-metric-card:hover {
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+.report-metric-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.report-metric-val {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  line-height: 1.2;
+}
+
+.report-metric-sub {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}

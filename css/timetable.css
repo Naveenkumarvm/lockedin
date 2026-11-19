@@ -1,0 +1,254 @@
+/* ==========================================================================
+   Locked In - Timetable Tab & Safe Backup Section
+   ========================================================================== */
+
+/* Timetable Tab */
+.timetable-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.day-switch-segmented {
+  display: inline-flex;
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 3px;
+  gap: 4px;
+}
+
+.day-switch-btn {
+  padding: 8px 16px;
+  min-height: 44px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  transition: all var(--transition-fast);
+}
+
+.day-switch-btn.active {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.timetable-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.timetable-item-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.timetable-item-card:hover {
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+.timetable-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex-grow: 1;
+}
+
+.timetable-item-time {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.timetable-item-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+}
+
+.timetable-item-note {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.timetable-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon-btn-subtle {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  transition: all var(--transition-fast);
+}
+
+.icon-btn-subtle:hover {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text-main);
+}
+
+/* Strict requirement: destructive actions -> black/ink text with outline (no red) */
+.icon-btn-subtle.delete:hover {
+  color: var(--color-text-main);
+  border: 1px solid var(--color-text-main);
+  background-color: var(--color-surface-subtle);
+}
+
+/* Backup & Utilities Section in Timetable Tab */
+.backup-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Strict requirement: Warning banner -> blue outline with bell icon (no amber) */
+.backup-alert-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-soft);
+  border: 1px solid var(--color-primary);
+  color: var(--color-text-main);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.backup-alert-banner svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.backup-status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.backup-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 520px) {
+  .backup-actions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.backup-btn-card {
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.backup-btn-card:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.backup-btn-card .btn-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-main);
+}
+
+.backup-btn-card .btn-desc {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* Alarm Health Check & Phone Alarms */
+.health-check-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+.health-check-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+.health-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+.health-badge.badge-success {
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+.health-badge.badge-neutral {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+.health-badge.badge-warning,
+.health-badge.badge-danger {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-text-main);
+  color: var(--color-text-main);
+}
+.calendar-steps-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.calendar-step-card {
+  padding: 12px 14px;
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}

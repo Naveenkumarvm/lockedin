@@ -1,0 +1,247 @@
+/* ==========================================================================
+   Locked In - Base Stylesheet & Design System Tokens
+   Palette: Ink Black (#0B1220), Primary Blue (#2F5BEA), Deep Blue (#1E3FB8),
+   Light Tints (#EAF0FF, #F4F7FF, #FFFFFF), Neutral Blue-Grey Lines (#D9E2F5)
+   ========================================================================== */
+
+/* Self-hosted Typography */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('../fonts/SpaceGrotesk.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Inter-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/Inter-SemiBold.woff2') format('woff2');
+}
+
+:root {
+  /* Core Strict Palette */
+  --color-ink: #0B1220;
+  --color-primary: #2F5BEA;
+  --color-primary-deep: #1E3FB8;
+  --color-tint-soft: #EAF0FF;
+  --color-tint-canvas: #F4F7FF;
+  --color-white: #FFFFFF;
+  --color-line: #D9E2F5;
+
+  /* Semantic Variables (Light Theme Default) */
+  --color-bg: var(--color-tint-canvas);
+  --color-surface: var(--color-white);
+  --color-surface-subtle: var(--color-tint-soft);
+  --color-surface-elevated: var(--color-white);
+  --color-border: var(--color-line);
+  --color-border-subtle: var(--color-tint-soft);
+
+  --color-primary-hover: var(--color-primary-deep);
+  --color-primary-soft: var(--color-tint-soft);
+  --color-primary-glow: rgba(47, 91, 234, 0.16);
+
+  --color-text-main: var(--color-ink);
+  --color-text-muted: #4B6185;
+  --color-text-inverse: var(--color-white);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(11, 18, 32, 0.04), 0 1px 2px rgba(11, 18, 32, 0.02);
+  --shadow-md: 0 4px 14px rgba(11, 18, 32, 0.06), 0 1px 3px rgba(11, 18, 32, 0.03);
+  --shadow-lg: 0 10px 28px rgba(11, 18, 32, 0.08), 0 2px 6px rgba(11, 18, 32, 0.03);
+  --shadow-modal: 0 20px 48px rgba(11, 18, 32, 0.16);
+
+  /* 8px Spacing Scale */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+
+  /* Radius Scale */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Fonts */
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0B1220;
+    --color-surface: #131C2E;
+    --color-surface-subtle: #1A263D;
+    --color-surface-elevated: #1F2E4A;
+    --color-border: #223352;
+    --color-border-subtle: #1A263D;
+
+    --color-primary: #7D9CFF;
+    --color-primary-hover: #98B1FF;
+    --color-primary-soft: #1A263D;
+    --color-primary-glow: rgba(125, 156, 255, 0.22);
+
+    --color-text-main: #FFFFFF;
+    --color-text-muted: #94A7C6;
+    --color-text-inverse: #0B1220;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6);
+    --shadow-modal: 0 24px 56px rgba(0, 0, 0, 0.75);
+  }
+}
+
+[data-theme="dark"] {
+  --color-bg: #0B1220;
+  --color-surface: #131C2E;
+  --color-surface-subtle: #1A263D;
+  --color-surface-elevated: #1F2E4A;
+  --color-border: #223352;
+  --color-border-subtle: #1A263D;
+
+  --color-primary: #7D9CFF;
+  --color-primary-hover: #98B1FF;
+  --color-primary-soft: #1A263D;
+  --color-primary-glow: rgba(125, 156, 255, 0.22);
+
+  --color-text-main: #FFFFFF;
+  --color-text-muted: #94A7C6;
+  --color-text-inverse: #0B1220;
+}
+
+[data-theme="light"] {
+  --color-bg: var(--color-tint-canvas);
+  --color-surface: var(--color-white);
+  --color-surface-subtle: var(--color-tint-soft);
+  --color-surface-elevated: var(--color-white);
+  --color-border: var(--color-line);
+  --color-border-subtle: var(--color-tint-soft);
+
+  --color-primary: #2F5BEA;
+  --color-primary-hover: var(--color-primary-deep);
+  --color-primary-soft: var(--color-tint-soft);
+  --color-primary-glow: rgba(47, 91, 234, 0.16);
+
+  --color-text-main: var(--color-ink);
+  --color-text-muted: #4B6185;
+  --color-text-inverse: var(--color-white);
+}
+
+/* CSS Reset & Defaults */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text-main);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  width: 100%;
+  max-width: 720px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--color-bg);
+  padding-bottom: calc(72px + var(--safe-bottom));
+}
+
+@media (min-width: 641px) {
+  #app {
+    padding-bottom: 40px;
+  }
+}
+
+/* Typography Scale */
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-text-main);
+  letter-spacing: -0.015em;
+}
+
+/* Form Elements */
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="time"],
+select,
+textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-main);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-glow);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  min-height: 44px;
+}
+
+/* Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

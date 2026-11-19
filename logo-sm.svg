@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none">
+  <!-- Graduation Mortarboard Diamond -->
+  <polygon points="60,14 112,29 60,43 8,29" fill="#0B1220" stroke="#0B1220" stroke-width="1.5" stroke-linejoin="round"/>
+  <polygon points="8,29 60,43 60,46 8,32" fill="#2F5BEA" opacity="0.35"/>
+  <polygon points="60,43 112,29 112,32 60,46" fill="#2F5BEA" opacity="0.55"/>
+  <path d="M34,39 C34,48 86,48 86,39" fill="none" stroke="#0B1220" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="60" cy="28.5" r="3.2" fill="#2F5BEA"/>
+  <path d="M60,28.5 C78,28.5 98,33 99,48" fill="none" stroke="#2F5BEA" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="99" cy="49" r="2.8" fill="#2F5BEA"/>
+  <path d="M96.5,52 L96,66 M99,52 L99,67 M101.5,52 L102,66" stroke="#2F5BEA" stroke-width="2.0" stroke-linecap="round"/>
+  <!-- Brain Wireframe Network -->
+  <g stroke="#0B1220" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <line x1="40" y1="50" x2="60" y2="48"/>
+    <line x1="40" y1="50" x2="26" y2="66"/>
+    <line x1="40" y1="50" x2="46" y2="64"/>
+    <line x1="40" y1="50" x2="60" y2="62"/>
+    <line x1="60" y1="48" x2="80" y2="50"/>
+    <line x1="60" y1="48" x2="46" y2="64"/>
+    <line x1="60" y1="48" x2="60" y2="62"/>
+    <line x1="60" y1="48" x2="74" y2="64"/>
+    <line x1="80" y1="50" x2="60" y2="62"/>
+    <line x1="80" y1="50" x2="74" y2="64"/>
+    <line x1="80" y1="50" x2="94" y2="66"/>
+    <line x1="26" y1="66" x2="46" y2="64"/>
+    <line x1="26" y1="66" x2="30" y2="84"/>
+    <line x1="46" y1="64" x2="60" y2="62"/>
+    <line x1="46" y1="64" x2="50" y2="80"/>
+    <line x1="60" y1="62" x2="74" y2="64"/>
+    <line x1="60" y1="62" x2="50" y2="80"/>
+    <line x1="60" y1="62" x2="70" y2="80"/>
+    <line x1="74" y1="64" x2="94" y2="66"/>
+    <line x1="74" y1="64" x2="70" y2="80"/>
+    <line x1="94" y1="66" x2="90" y2="84"/>
+    <line x1="30" y1="84" x2="50" y2="80"/>
+    <line x1="30" y1="84" x2="42" y2="99"/>
+    <line x1="50" y1="80" x2="70" y2="80"/>
+    <line x1="50" y1="80" x2="42" y2="99"/>
+    <line x1="70" y1="80" x2="90" y2="84"/>
+    <line x1="70" y1="80" x2="78" y2="99"/>
+    <line x1="90" y1="84" x2="78" y2="99"/>
+    <line x1="42" y1="99" x2="60" y2="102"/>
+    <line x1="60" y1="102" x2="78" y2="99"/>
+  </g>
+  <!-- Brain Nodes -->
+    <circle cx="40" cy="50" r="3.0" fill="#0B1220"/>
+    <circle cx="60" cy="48" r="4.2" fill="#2F5BEA"/>
+    <circle cx="80" cy="50" r="3.0" fill="#0B1220"/>
+    <circle cx="26" cy="66" r="4.2" fill="#2F5BEA"/>
+    <circle cx="46" cy="64" r="3.0" fill="#0B1220"/>
+    <circle cx="60" cy="62" r="3.0" fill="#0B1220"/>
+    <circle cx="74" cy="64" r="4.2" fill="#2F5BEA"/>
+    <circle cx="94" cy="66" r="3.0" fill="#0B1220"/>
+    <circle cx="30" cy="84" r="3.0" fill="#0B1220"/>
+    <circle cx="50" cy="80" r="4.2" fill="#2F5BEA"/>
+    <circle cx="70" cy="80" r="3.0" fill="#0B1220"/>
+    <circle cx="90" cy="84" r="3.0" fill="#0B1220"/>
+    <circle cx="42" cy="99" r="3.0" fill="#0B1220"/>
+    <circle cx="60" cy="102" r="4.2" fill="#2F5BEA"/>
+    <circle cx="78" cy="99" r="3.0" fill="#0B1220"/>
+</svg>
